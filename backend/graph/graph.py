@@ -2,14 +2,12 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph import END, START, StateGraph
 
 from backend.graph.state import CareerState
-from backend.nodes.career_nodes import (
-    validate_input,
-    match_node,
-    interview_node,
-    advice_node,
-    finalize_node,
-    failure_node,
-)
+from backend.nodes.validate_input import validate_input
+from backend.nodes.match_node import match_node
+from backend.nodes.interview_node import interview_node
+from backend.nodes.advice_node import advice_node
+from backend.nodes.finalize_node import finalize_node
+from backend.nodes.failure_node import failure_node
 
 
 def input_router(state: CareerState):
